@@ -1,0 +1,55 @@
+{
+  "name": "Terrokand",
+  "productName": "Terrokand - Magic Carpet Adventure",
+  "version": "1.0.0",
+  "description": "An Uzbekistan Terrokand flying carpet adventure game for children",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "sync-game-dist": "cmd /c \"cd /d ..\\app && npm exec vite -- build --outDir ..\\exe-app\\game-dist --emptyOutDir true\"",
+    "build": "electron-builder --win --x64 --config.win.signAndEditExecutable=false",
+    "build-portable": "electron-builder --win portable --x64 --config.win.signAndEditExecutable=false",
+    "build-current": "npm run sync-game-dist && electron-builder --win --x64 --config.win.signAndEditExecutable=false",
+    "build-current-portable": "npm run sync-game-dist && electron-builder --win portable --x64 --config.win.signAndEditExecutable=false"
+  },
+  "build": {
+    "appId": "com.silkroad.soharer",
+    "productName": "Terrokand",
+    "directories": {
+      "output": "dist-exe"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "game-dist/**/*",
+      "carpet-dist/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        },
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "game-dist/assets/title-screen.jpg"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "game-dist/assets/title-screen.jpg",
+      "uninstallerIcon": "game-dist/assets/title-screen.jpg",
+      "installerHeaderIcon": "game-dist/assets/title-screen.jpg"
+    },
+    "portable": {
+      "artifactName": "Terrokand-Portable-${version}.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Video Test</title></head>
+<body style="background:#000; color:#fff; margin:0;">
+  <div style="padding:20px;">
+    <h2>Testing transition-samarkand.mp4</h2>
+    <p>If you see the video below, it works. If not, check browser console.</p>
+    <video src="./videos/transition-samarkand.mp4" controls autoplay muted playsinline width="640" height="360" style="border:2px solid #d4a017;"></video>
+    <p id="status">Loading...</p>
+  </div>
+  <script>
+    const v = document.querySelector('video');
+    v.addEventListener('canplay', () => document.getElementById('status').textContent = 'CAN PLAY (duration: ' + v.duration + 's)');
+    v.addEventListener('error', (e) => document.getElementById('status').textContent = 'ERROR: ' + (v.error?.message || 'unknown'));
+    v.addEventListener('play', () => document.getElementById('status').textContent += ' -> PLAYING');
+  </script>
+</body>
+</html>

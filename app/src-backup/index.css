@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@400;700;900&family=Nunito:wght@400;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    
+    /* Uzbek Theme Colors */
+    --uzbek-blue: 195 100% 33%;
+    --uzbek-gold: 45 100% 51%;
+    --uzbek-cyan: 180 100% 42%;
+    --uzbek-deep-blue: 220 80% 25%;
+    --uzbek-amber: 35 95% 53%;
+    --uzbek-royal: 260 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+  }
+}
+
+/* Uzbek Theme Styles */
+.uzbek-gradient {
+  background: linear-gradient(135deg, #0066a1 0%, #0099cc 30%, #d4a017 70%, #c9a227 100%);
+}
+
+.uzbek-gradient-dark {
+  background: linear-gradient(135deg, #001a33 0%, #003d66 50%, #1a0a33 100%);
+}
+
+.uzbek-text-gold {
+  color: #d4a017;
+  text-shadow: 0 0 10px rgba(212, 160, 23, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.uzbek-text-blue {
+  color: #00a8cc;
+  text-shadow: 0 0 10px rgba(0, 168, 204, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.title-font {
+  font-family: 'Cinzel', serif;
+}
+
+/* Animated background */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(212, 160, 23, 0.6); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Glass morphism */
+.glass-panel {
+  background: rgba(0, 30, 60, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+}
+
+.glass-panel-light {
+  background: rgba(0, 50, 90, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 168, 204, 0.2);
+}
+
+/* Button styles */
+.uzbek-button {
+  @apply px-6 py-3 rounded-lg font-bold text-white transition-all duration-300;
+  background: linear-gradient(135deg, #0066a1, #0099cc);
+  border: 2px solid #d4a017;
+  box-shadow: 0 4px 15px rgba(0, 102, 161, 0.4);
+}
+
+.uzbek-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 168, 204, 0.6);
+  border-color: #ffd700;
+}
+
+.uzbek-button-gold {
+  @apply px-6 py-3 rounded-lg font-bold transition-all duration-300;
+  background: linear-gradient(135deg, #d4a017, #ffd700);
+  color: #001a33;
+  border: 2px solid #0066a1;
+  box-shadow: 0 4px 15px rgba(212, 160, 23, 0.4);
+}
+
+.uzbek-button-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(212, 160, 23, 0.6);
+}
+
+/* Star animation */
+@keyframes star-pop {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  50% { transform: scale(1.3) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.star-animate {
+  animation: star-pop 0.5s ease-out forwards;
+}
+
+/* Particle canvas */
+.particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 30, 60, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d4a017, #0066a1);
+  border-radius: 4px;
+}
+
+/* Game container */
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Level card */
+.level-card {
+  @apply relative rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
+  border: 2px solid transparent;
+}
+
+.level-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: #d4a017;
+  box-shadow: 0 10px 30px rgba(212, 160, 23, 0.3);
+}
+
+.level-card.locked {
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+/* Map pin */
+.map-pin {
+  @apply absolute w-8 h-8 rounded-full flex items-center justify-center font-bold text-white;
+  background: linear-gradient(135deg, #d4a017, #ffd700);
+  border: 3px solid #0066a1;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.map-pin:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 20px rgba(212, 160, 23, 0.5);
+}
+
+.map-pin.locked {
+  background: linear-gradient(135deg, #666, #999);
+  border-color: #444;
+}
+
+/* Terraria-style buttons */
+.terraria-btn {
+  background: linear-gradient(180deg, #a07840 0%, #6b4e2e 100%);
+  border: 3px solid #3d2817;
+  box-shadow:
+    inset 2px 2px 0px rgba(255,255,255,0.3),
+    inset -2px -2px 0px rgba(0,0,0,0.4),
+    0 4px 0px #2a1a0f;
+  color: #f5e6c8;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-shadow: 1px 1px 0px #2a1a0f;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.1s;
+  image-rendering: pixelated;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.terraria-btn:hover {
+  background: linear-gradient(180deg, #b08850 0%, #7b5e3e 100%);
+  box-shadow:
+    inset 2px 2px 0px rgba(255,255,255,0.4),
+    inset -2px -2px 0px rgba(0,0,0,0.3),
+    0 4px 0px #2a1a0f;
+  color: #ffffff;
+}
+
+.terraria-btn:active {
+  transform: translateY(4px);
+  box-shadow:
+    inset 2px 2px 0px rgba(255,255,255,0.2),
+    inset -2px -2px 0px rgba(0,0,0,0.5),
+    0 0 0px #2a1a0f;
+}

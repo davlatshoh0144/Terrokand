@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+app/node_modules/
+exe-app/node_modules/
+
+# Build outputs
+dist/
+app/dist/
+exe-app/dist-exe/
+exe-app/game-dist/
+exe-app/carpet-dist/
+output/
+
+# Logs
+*.log
+app/*.log
+exe-app/*.log
+
+# Local/system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Large local artifacts
+*.zip

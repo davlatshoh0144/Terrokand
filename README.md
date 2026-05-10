@@ -11,6 +11,13 @@ The project includes:
 - Team name: **Arcanoids**
 - App name: **Terrokand**
 
+-Contributers 
+  -Diyorbek Zokirov =  mini game developer                         ==claude/gemini
+  -Abdulaziz Abdukhafizov =  game level constructor/logic design   ==kimi
+  -Mironshoh Ahmadaov = Video Editer/sleeper                       == copilot
+  -Davlatshoh Hoshimov = GUI Polish/debug                          == chatgpt/codex
+  -Mustafo Xalimov = Sound Designer                                ==suno
+
 ## Tech Stack and Engine
 
 The gameplay runs on a custom **2D HTML5 Canvas game engine** written in **TypeScript**.
@@ -76,3 +83,6 @@ Project support and tooling contributions:
 - **Codex**: final debugging and polishing
 
 Detailed attribution is also available in [SOURCES.md](./SOURCES.md).
+
+
+(C) Copyright Reserved by ArcanoidsTM  

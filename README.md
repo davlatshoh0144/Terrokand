@@ -3,8 +3,8 @@
 `Terrokand` is a game project by team **Arcanoids**, prepared for GameFest / GameJam Uzbekistan.
 
 The project includes:
-- a browser-based game app (`app`)
 - an Electron desktop wrapper and Windows packaging setup (`exe-app`)
+- a game app (`app`)
 
 ## Team
 

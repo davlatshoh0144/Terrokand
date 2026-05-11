@@ -11,12 +11,14 @@ The project includes:
 - Team name: **Arcanoids**
 - App name: **Terrokand**
 
--Contributers 
-  -Diyorbek Zokirov =  mini game developer                         ==claude/gemini
-  -Abdulaziz Abdukhafizov =  game level constructor/logic design   ==kimi
-  -Mironshoh Ahmadaov = Video Editer/sleeper                       == copilot
-  -Davlatshoh Hoshimov = GUI Polish/debug                          == chatgpt/codex
-  -Mustafo Xalimov = Sound Designer                                ==suno
+## Contributors:
+
+- Diyorbek Zokirov              Indie Game Development
+- Abdulaziz Abdukhafizov        Core Level Design & Game Design
+- Mironshoh Ahmadaov            Video Montage
+- Davlatshoh Hoshimov           GUI Polish
+- Mustafo Xalimov               Sound Engineer           
+
 
 ## Tech Stack and Engine
 

@@ -51,13 +51,15 @@ This runs:
 
 ### Option 1: Build and run as Windows app (`.exe`)
 
+Open a new windows command terminal inside cloned /Terrokand folder in your local machine
+
 ```bash
 cd exe-app
 npm install
 npm run build-current-portable
 ```
 
-After build, run:
+After build, run this inside a new windows command terminal inside cloned /Terrokand folder in your local machine:
 - `exe-app/dist-exe/Terrokand-Portable-1.0.0.exe`
 
 

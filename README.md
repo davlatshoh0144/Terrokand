@@ -48,7 +48,21 @@ This runs:
 
 ## How to Launch the Game
 
-### Option 1: Run from source (development)
+
+### Option 1: Build and run as Windows app (`.exe`)
+
+```bash
+cd exe-app
+npm install
+npm run build-current-portable
+```
+
+After build, run:
+- `exe-app/dist-exe/Terrokand-Portable-1.0.0.exe`
+
+
+
+### Option 2: Run from source (development)
 
 ```bash
 cd app
@@ -59,16 +73,7 @@ npm run dev
 Then open:
 - `http://127.0.0.1:3001/` (or the port shown by Vite)
 
-### Option 2: Build and run as Windows app (`.exe`)
 
-```bash
-cd exe-app
-npm install
-npm run build-current-portable
-```
-
-After build, run:
-- `exe-app/dist-exe/Terrokand-Portable-1.0.0.exe`
 
 ## Controls (Flying Carpet Mode)
 

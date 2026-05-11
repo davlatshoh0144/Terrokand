@@ -13,11 +13,11 @@ The project includes:
 
 ## Contributors:
 
-- Diyorbek Zokirov              Indie Game Development
-- Abdulaziz Abdukhafizov        Core Level Design & Game Design
-- Mironshoh Ahmadaov            Video Montage
-- Davlatshoh Hoshimov           GUI Polish
-- Mustafo Xalimov               Sound Engineer           
+- Diyorbek Zokirov              [Indie Game Development]
+- Abdulaziz Abdukhafizov        [Core Level Design & Game Design]
+- Mironshoh Ahmadaov            [Video Montage]
+- Davlatshoh Hoshimov           [GUI Polish]
+- Mustafo Xalimov               [Sound Engineer]           
 
 
 ## Tech Stack and Engine
